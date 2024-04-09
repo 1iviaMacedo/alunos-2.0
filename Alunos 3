@@ -1,5 +1,5 @@
 SELECT MAX(Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND Nome NOT IN ('Lívia') AND Nome LIKE '%c%'; 
-SELECT MIN(Idade) FROM `Alunos` WHERE Nome NOT IN ('Caroline Camargo') AND Nome LIKE '%f%';
+SELECT MIN(Idade) FROM `Alunos` WHERE Nome NOT IN ('Lívia') AND Nome LIKE '%f%';
 SELECT MAX(Idade) FROM `Alunos` WHERE SEXO = 'FEM' AND Nome NOT IN ('Lívia') AND Nome LIKE 'g%';
 SELECT MIN(Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND Nome NOT IN ('Lívia') AND Nome LIKE 'r%';
 
