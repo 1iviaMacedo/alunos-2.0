@@ -1,9 +1,9 @@
-SELECT MAX(Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND Nome NOT IN ('Lívia') AND Nome LIKE '%c%'; 
-SELECT MIN(Idade) FROM `Alunos` WHERE Nome NOT IN ('Lívia') AND Nome LIKE '%f%';
-SELECT MAX(Idade) FROM `Alunos` WHERE SEXO = 'FEM' AND Nome NOT IN ('Lívia') AND Nome LIKE 'g%';
-SELECT MIN(Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND Nome NOT IN ('Lívia') AND Nome LIKE 'r%';
+SELECT MAX(Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND PrimeiroNome NOT IN ('Lívia') AND PrimeiroNome LIKE '%c%'; 
+SELECT MIN(Idade) FROM `Alunos` WHERE PrimeiroNome NOT IN ('Lívia') AND PrimeiroNome LIKE '%f%';
+SELECT MAX(Idade) FROM `Alunos` WHERE SEXO = 'FEM' AND Nome NOT IN ('Lívia') AND PrimeiroNome LIKE 'g%';
+SELECT MIN(Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND Nome NOT IN ('Lívia') AND PrimeiroNome LIKE 'r%';
 
 SELECT (SELECT SUM(IdadeMax) FROM (SELECT MAX(Idade)
-AS IdadeMax FROM `Alunos` WHERE Nome NOT IN ('Lívia') GROUP BY Nome) AS IdadesMaximas) AS SOMA_MAX_IDADE, (SELECT SUM(IdadeMin) FROM (SELECT MIN(Idade) AS IdadeMin FROM `Alunos` WHERE Nome NOT IN ('Lívia') GROUP BY Nome) AS IdadesMinimas) AS SOMA_MIN_IDADE;
+AS IdadeMax FROM `Alunos` WHERE PrimeiroNome NOT IN ('Lívia') GROUP BY Nome) AS IdadesMaximas) AS SOMA_MAX_IDADE, (SELECT SUM(IdadeMin) FROM (SELECT MIN(Idade) AS IdadeMin FROM `Alunos` WHERE PrimeiroNome NOT IN ('Lívia') GROUP BY PrimeiroNome) AS IdadesMinimas) AS SOMA_MIN_IDADE;
 
-SELECT * FROM `Alunos` WHERE SEXO = 'FEM' AND Nome LIKE '%a%';
+SELECT * FROM `Alunos` WHERE SEXO = 'FEM' AND PrimeiroNome LIKE '%a%';
